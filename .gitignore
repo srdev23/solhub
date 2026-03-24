@@ -1,0 +1,8 @@
+node_modules
+/.next
+.next
+package-lock.json
+yarn.lock
+.env
+result.json
+solhub.zip

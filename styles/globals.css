@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+@font-face {
+  font-family: 'font-IT';
+  src: url('/tt_octosquares/TT Octosquares Trial Condensed Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-IT-regular';
+  src: url('/tt_octosquares/TT Octosquares Trial Compressed Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+.text-base1{
+  gap: 0.75rem !important;
+  margin-top: 0.5rem;
+  line-height: 1.75rem;
+}
+.text-base2{
+  gap: 1.25rem !important;
+}
+.f-regular{
+  font-family:'font-IT-regular';
+}
+.ps-sidebar-root .active {
+  background-color: #383838;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /*default gradient */
+  background: rgb(0, 40, 60);
+}
+.gradient-1 {
+  /* card gradient */
+  background: linear-gradient(114.9deg, rgb(39, 34, 57) 8.3%, rgb(0, 40, 60) 39.6%, rgb(28, 117, 161) 93.4%);
+}
+
+.ps-sidebar-container {
+  /* sidebar gradient */
+
+  background: linear-gradient(114.9deg, rgb(36, 31, 49) 8.3%, rgb(0, 44, 66) 41.6%, rgb(1, 37, 55) 93.4%);
+  border: 1px solid white;
+}
+.css-12nsjil{
+  background: linear-gradient(114.9deg, rgb(55, 47, 76) 8.3%, rgb(0, 44, 66) 41.6%, rgb(10, 86, 125) 93.4%) !important;
+  
+
+}
+@media (min-width:993px) {
+  .stickSidebar {
+    position: sticky !important;
+    top: 0 !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+label,
+div {
+  color: white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.ps-sidebar-root {
+  border: none !important;
+}
+
+.ps-sidebar-container {
+  border-radius: 10px !important;
+}
+
+/*----------------- Wallet button----------------- */
+
+/* For WebKit browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  margin-top: 1rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: #000000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  border-radius: 1rem;
+  background: #555;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #000000;  
+}
+
+.custom-scrollbar::-moz-scrollbar-track {
+  border-radius: 1rem;
+  background: #000000;
+}
+
+.custom-scrollbar::-moz-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+.custom-scrollbar::-moz-scrollbar-thumb:hover {
+  border-radius: 1rem;
+  background: #555;
+}
+.custom-wallet-btn{
+  background: radial-gradient(circle at 50.1% 88.8%, rgb(31, 31, 31) 0%, rgb(14, 14, 14) 99.4%);
+}
+
+
+/* Custom WalletMultiButton Styles */
+.cus-wallet-btn {
+  min-width: 40px !important;
+  max-width: 100px !important;
+  width: 100%;
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #399dfb;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  
+}
+ 
+/* Additional customization for responsiveness */
+@media (min-width: 1024px) {
+  .custom-wallet-button {
+      max-width: 150px;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .cus-wallet-btn {
+    font-size: 0.85rem;  
+    height: 30px;
+  }
+.custom-wallet-margin{
+  margin-right: -4px;
+}
+.custom-wallet-height{
+  margin-right: -13px;
+  transform: scale(0.8);
+  align-items: center !important;
+  justify-content: center !important;
+  
+}
+}
+
+/* Assuming the dropdown uses the class .dropdown-content */
+div[data-slot="listbox"] {
+  max-height: 300px !important;  /* Adjust this to your desired maximum height */
+  overflow-y: auto !important;   /* Enable vertical scrolling */
+}
